@@ -1,4 +1,4 @@
-package com.lucasprioste.searchrepositorygithub.ui.theme
+package com.lucasprioste.searchrepositorygithub.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -1,4 +1,4 @@
-package com.lucasprioste.searchrepositorygithub.ui.theme
+package com.lucasprioste.searchrepositorygithub.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
