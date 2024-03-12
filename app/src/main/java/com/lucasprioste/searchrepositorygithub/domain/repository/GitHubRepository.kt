@@ -1,6 +1,6 @@
 package com.lucasprioste.searchrepositorygithub.domain.repository
 
-import com.lucasprioste.searchrepositorygithub.core.Resource
+import com.lucasprioste.searchrepositorygithub.core.network_api_help.Resource
 import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.Repository
 import kotlinx.coroutines.flow.Flow
 

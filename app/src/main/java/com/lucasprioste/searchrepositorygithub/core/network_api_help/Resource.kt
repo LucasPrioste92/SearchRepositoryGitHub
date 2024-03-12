@@ -1,4 +1,4 @@
-package com.lucasprioste.searchrepositorygithub.core
+package com.lucasprioste.searchrepositorygithub.core.network_api_help
 
 sealed class Resource<T>(val data: T?=null, val message: String?=null){
     class Success<T>(data: T?): Resource<T>(data)

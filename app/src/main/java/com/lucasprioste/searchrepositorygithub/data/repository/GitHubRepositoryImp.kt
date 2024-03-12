@@ -1,10 +1,9 @@
 package com.lucasprioste.searchrepositorygithub.data.repository
 
-import com.lucasprioste.searchrepositorygithub.core.Resource
+import com.lucasprioste.searchrepositorygithub.core.network_api_help.Resource
 import com.lucasprioste.searchrepositorygithub.data.mapper.toResponseSearchRepositories
 import com.lucasprioste.searchrepositorygithub.data.remote.GitHubApi
 import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.Repository
-import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.ResponseSearchRepositories
 import com.lucasprioste.searchrepositorygithub.domain.repository.GitHubRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

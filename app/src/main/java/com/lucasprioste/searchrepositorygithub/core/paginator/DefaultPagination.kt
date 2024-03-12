@@ -1,7 +1,7 @@
 package com.lucasprioste.searchrepositorygithub.core.paginator
 
 
-import com.lucasprioste.searchrepositorygithub.core.Resource
+import com.lucasprioste.searchrepositorygithub.core.network_api_help.Resource
 import kotlinx.coroutines.flow.Flow
 
 class DefaultPagination<Key, Item>(
