@@ -6,4 +6,7 @@
     <string name="owner">Owner:</string>
     <string name="image_user_desc">Image user</string>
     <string name="created_at">Created at:</string>
+    <string name="search_icon_desc">Search Icon</string>
+    <string name="search">Search Repository</string>
+    <string name="something_went_wrong">Something went wrong</string>
 </resources>

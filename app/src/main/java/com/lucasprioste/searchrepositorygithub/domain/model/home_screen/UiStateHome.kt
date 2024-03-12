@@ -5,5 +5,6 @@ import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.Rep
 data class UiStateHome(
     val repositories: List<Repository> = emptyList(),
     val isLoading: Boolean = true,
-    val errorStringResource: Int? = null
+    val errorStringResource: Int? = null,
+    val input: String = "",
 )

@@ -24,6 +24,7 @@ import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.Rep
 import com.lucasprioste.searchrepositorygithub.presentation.core.util.OnBottomReached
 import com.lucasprioste.searchrepositorygithub.presentation.ui.theme.ArrangementCardRepository
 import com.lucasprioste.searchrepositorygithub.presentation.ui.theme.ElevationCard
+import com.lucasprioste.searchrepositorygithub.presentation.ui.theme.PaddingTopListRepositories
 import com.lucasprioste.searchrepositorygithub.presentation.ui.theme.RepositoryCardHorizontalPadding
 import com.lucasprioste.searchrepositorygithub.presentation.ui.theme.RepositoryCardVerticalPadding
 import com.lucasprioste.searchrepositorygithub.presentation.ui.theme.ShapeCardRepository
@@ -46,7 +47,7 @@ fun RepositoriesList(
         modifier = modifier,
         state = scrollState,
         verticalArrangement = Arrangement.spacedBy(ArrangementCardRepository),
-        contentPadding = PaddingValues(vertical = 10.dp)
+        contentPadding = PaddingValues(vertical = PaddingTopListRepositories)
     ){
         items(items){repository ->
             Card(
@@ -86,7 +87,7 @@ fun RepositoriesList(
         }
         item {
             AnimatedVisibility(visible = isLoading) {
-                EmptyListRepositories(
+                LoadingRepositories(
                     modifier = Modifier
                         .fillMaxSize(),
                     isLoading = isLoading

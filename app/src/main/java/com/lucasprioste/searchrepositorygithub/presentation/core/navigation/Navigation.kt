@@ -26,7 +26,8 @@ fun Navigation(
             HomeScreen(
                 repositories = uiState.repositories,
                 isLoading = uiState.isLoading,
-                onEvent = viewModel::onEvent
+                onEvent = viewModel::onEvent,
+                searchInput = uiState.input
             )
         }
         composable(
