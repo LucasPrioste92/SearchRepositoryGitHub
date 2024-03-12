@@ -1,6 +1,5 @@
 package com.lucasprioste.searchrepositorygithub.presentation.home
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lucasprioste.searchrepositorygithub.R
@@ -72,19 +71,19 @@ class HomeViewModel @Inject constructor(
     fun onEvent(event: HomeEvent){
         when(event){
             HomeEvent.LoadMore -> {
-                if (!paginationHelper.value.isLoading && uiState.value.repositories.isNotEmpty() && !paginationHelper.value.endReached) {
+                if (!paginationHelper.value.isLoading && uiState.value.repositories.isNotEmpty() && !paginationHelper.value.endReached)
                     loadNextItems()
-                }
             }
             is HomeEvent.OnSearchQueryChange -> {
                 jobSearch?.cancel()
+
                 _uiState.update {
                     it.copy(input = event.newValue)
                 }
+
                 jobSearch = Timer().schedule(500){
-                    if (event.newValue.isNotBlank()){
+                    if (event.newValue.isNotBlank())
                         loadNewRepositories()
-                    }
                 }
             }
             HomeEvent.SearchCharacter -> {
@@ -96,8 +95,10 @@ class HomeViewModel @Inject constructor(
 
     private fun loadNewRepositories(){
         lastSearchInput = uiState.value.input
+
         paginationHelper.update { PaginationInfo(page = 1) }
         paginator.reset(key = 1)
+
         _uiState.update { it.copy(repositories = emptyList()) }
         loadNextItems()
     }
