@@ -1,7 +1,7 @@
 package com.lucasprioste.searchrepositorygithub.domain.repository
 
 import com.lucasprioste.searchrepositorygithub.core.Resource
-import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.ResponseSearchRepositories
+import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.Repository
 import kotlinx.coroutines.flow.Flow
 
 interface GitHubRepository {
@@ -11,5 +11,5 @@ interface GitHubRepository {
         page: Int? = null,
         order: String? = null,
         sort: String? = null,
-    ): Flow<Resource<ResponseSearchRepositories>>
+    ): Flow<Resource<List<Repository>>>
 }

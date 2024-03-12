@@ -12,13 +12,13 @@ data class RepositoryDto(
     @SerializedName("private")
     val private: Boolean,
     @SerializedName("owner")
-    val owner: OwnerDto,
+    val owner: OwnerDto? = null,
     @SerializedName("description")
-    val description: String,
+    val description: String? = null,
     @SerializedName("fork")
     val fork: Boolean,
     @SerializedName("language")
-    val language: String,
+    val language: String? = null,
     @SerializedName("score")
     val score: Int,
     @SerializedName("watchers_count")

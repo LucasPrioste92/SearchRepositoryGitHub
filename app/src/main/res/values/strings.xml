@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SearchRepositoryGitHub</string>
+    <string name="not_found_repo_desc_img">Not Found Any Repo Image</string>
+    <string name="not_found_repo">No repository found.</string>
+    <string name="icon_star_desc">Icon Star</string>
+    <string name="owner">Owner:</string>
+    <string name="image_user_desc">Image user</string>
+    <string name="created_at">Created at:</string>
 </resources>

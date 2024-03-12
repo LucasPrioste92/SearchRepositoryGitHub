@@ -3,6 +3,7 @@ package com.lucasprioste.searchrepositorygithub.data.repository
 import com.lucasprioste.searchrepositorygithub.core.Resource
 import com.lucasprioste.searchrepositorygithub.data.mapper.toResponseSearchRepositories
 import com.lucasprioste.searchrepositorygithub.data.remote.GitHubApi
+import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.Repository
 import com.lucasprioste.searchrepositorygithub.domain.model.repositories_git.ResponseSearchRepositories
 import com.lucasprioste.searchrepositorygithub.domain.repository.GitHubRepository
 import kotlinx.coroutines.flow.Flow
@@ -20,7 +21,7 @@ class GitHubRepositoryImp @Inject constructor(
         page: Int?,
         order: String?,
         sort: String?
-    ): Flow<Resource<ResponseSearchRepositories>> = flow {
+    ): Flow<Resource<List<Repository>>> = flow {
         emit(Resource.Loading(isLoading = true))
         try {
             val response = api.getSearchRepositories(
@@ -30,7 +31,7 @@ class GitHubRepositoryImp @Inject constructor(
                 order = order,
                 sort = sort
             )
-            emit(Resource.Success(response.toResponseSearchRepositories()))
+            emit(Resource.Success(response.toResponseSearchRepositories().items))
         } catch (e: HttpException) {
             e.printStackTrace()
             emit(Resource.Error(message = e.message ?: "Something Went Wrong: ${e.message()}"))

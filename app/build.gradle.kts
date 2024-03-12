@@ -70,10 +70,16 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
+    //ACCOMPANIST NAVIGATION ANIMATION
+    //implementation("com.google.accompanist:accompanist-navigation-animation:0.21.1-beta")
+
     // HILT
     implementation("com.google.dagger:hilt-android:2.49")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     kapt("com.google.dagger:hilt-android-compiler:2.49")
+
+    // COIL
+    implementation("io.coil-kt:coil-compose:2.6.0")
 
     // RETROFIT
     implementation("com.squareup.retrofit2:retrofit:2.9.0")

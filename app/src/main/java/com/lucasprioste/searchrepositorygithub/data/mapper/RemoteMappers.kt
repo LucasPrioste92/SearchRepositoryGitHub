@@ -23,7 +23,7 @@ fun RepositoryDto.toRepository(): Repository{
         name = name,
         fullName = fullName,
         private = private,
-        owner = owner.toOwner(),
+        owner = owner?.toOwner(),
         createdAt = createdAt.toLocalDateTime(),
         updatedAt = updatedAt.toLocalDateTime(),
         description = description,
