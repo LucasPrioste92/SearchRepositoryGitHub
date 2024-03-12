@@ -23,9 +23,18 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Configs
+            buildConfigField(type = "String", name = "GIT_HUB_API_URL", value = "\"https://api.github.com/\"")
+            buildConfigField(type = "String", name = "GIT_HUB_API_TOKEN", value = "\"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\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+
+            // Configs
+            buildConfigField(type = "String", name = "GIT_HUB_API_URL", value = "\"https://api.github.com/\"")
+            buildConfigField(type = "String", name = "GIT_HUB_API_TOKEN", value = "\"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\"")
         }
     }
     compileOptions {
@@ -37,6 +46,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.8"
@@ -67,6 +77,8 @@ dependencies {
 
     // RETROFIT
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.3")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
 
     // GSON
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
