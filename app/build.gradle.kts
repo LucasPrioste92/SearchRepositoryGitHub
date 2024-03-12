@@ -65,6 +65,9 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     kapt("com.google.dagger:hilt-android-compiler:2.49")
 
+    // RETROFIT
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
     // UNIT TEST
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
