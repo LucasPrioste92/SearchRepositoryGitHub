@@ -3,10 +3,9 @@ This application is developed natively for the Android operating system with the
 The project integrates with the GitHub API to display a list of all public repositories. It also includes a search functionality that allows users to look up specific repositories by name.
 
 ## ShowCase
-https://github.com/user-attachments/assets/deb35bb4-9059-4ba0-b0cb-10665f7e5f95
+https://github.com/user-attachments/assets/ce4b9821-f6ed-4e8c-9b66-cc26ff686105
 
 ## Technologies
-
 * Kotlin
 * Jetpack Compose
 * Material3
