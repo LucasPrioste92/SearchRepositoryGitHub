@@ -18,6 +18,7 @@ val ArrangementCardRepository = 14.dp
 // SCREEN
 val HorizontalPadding = 20.dp
 val TopPadding = 10.dp
+val TopPaddingContent = 60.dp
 val PaddingTopListRepositories = 10.dp
 
 // SHAPES

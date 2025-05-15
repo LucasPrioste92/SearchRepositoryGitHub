@@ -6,11 +6,11 @@ import kotlinx.coroutines.flow.Flow
 
 class DefaultPagination<Key, Item>(
     private val initialKey: Key,
-    private inline val onLoadUpdated: (Boolean) -> Unit,
-    private inline val onRequest: suspend (nextKey: Key) -> Flow<Resource<List<Item>>>,
-    private inline val getNextKey: suspend (List<Item>) -> Key,
-    private inline val onError: suspend (message: String?) -> Unit,
-    private inline val onSuccess: suspend (items: List<Item>, newKey: Key) -> Unit
+    private val onLoadUpdated: (Boolean) -> Unit,
+    private val onRequest: suspend (nextKey: Key) -> Flow<Resource<List<Item>>>,
+    private val getNextKey: suspend (List<Item>) -> Key,
+    private val onError: suspend (message: String?) -> Unit,
+    private val onSuccess: suspend (items: List<Item>, newKey: Key) -> Unit
 ): Pagination<Key, Item> {
 
     private var currentKey = initialKey
