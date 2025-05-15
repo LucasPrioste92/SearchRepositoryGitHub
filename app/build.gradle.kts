@@ -27,7 +27,7 @@ android {
         debug {
             // Configs
             buildConfigField(type = "String", name = "GIT_HUB_API_URL", value = "\"https://api.github.com/\"")
-            buildConfigField(type = "String", name = "GIT_HUB_API_TOKEN", value = "\"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\"")
+            buildConfigField(type = "String", name = "GIT_HUB_API_TOKEN", value = "\"\"")
         }
         release {
             isMinifyEnabled = false
@@ -35,7 +35,7 @@ android {
 
             // Configs
             buildConfigField(type = "String", name = "GIT_HUB_API_URL", value = "\"https://api.github.com/\"")
-            buildConfigField(type = "String", name = "GIT_HUB_API_TOKEN", value = "\"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\"")
+            buildConfigField(type = "String", name = "GIT_HUB_API_TOKEN", value = "\"\"")
         }
     }
     compileOptions {
